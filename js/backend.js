@@ -192,6 +192,41 @@ function renderImageDetails(image, article) {
             window.location.href = `comment.html?imageId=${imageId}`;
         });
     }
+    if (likeButton) {
+
+        likeButton.addEventListener('click', () => {
+            // Get the current like count from the button's data attribute
+            let currentLikeCount = parseInt(likeButton.dataset.likeCount) || 0;
+            
+            // Increment the like count
+            currentLikeCount += 1;
+            
+            // Update the data attribute with the new like count
+            likeButton.dataset.likeCount = currentLikeCount;
+    
+            // Send the updated like count to the backend
+            fetch(`http://localhost:5050/${image.id}/like?like=${currentLikeCount}`, {
+                method: 'PUT',
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to add like');
+                }
+                return response.json();
+            })
+            .then(result => {
+                console.log('Like added successfully:', result);
+                
+                // Optionally, update the button text to show the updated like count
+                likeButton.textContent = `${currentLikeCount}`;
+            })
+            .catch(error => {
+                console.error('Error adding like:', error);
+                alert(error.message);
+            });
+        });
+        
+    }
 }
 
 function updatePageControls(totalPages) {
