@@ -1,0 +1,165 @@
+/* styles.css (for GeoSyncra)
+   General color / font / styling for all pages 
+   Ceg4100 
+   Anna Crafton
+   Last Updated 11/7/2024 */
+
+/* Root CSS Variables */
+:root {
+    --primary-color: #023047;
+    --secondary-color: #8ecae6;
+    --text-color: #ffffff;
+    --background-color: aliceblue;
+}
+
+/* Body Styling for Header */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif; /* Set global font family */
+}
+
+/* Formatting and style for header that is on every page */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: table;
+    width: 100%;
+}
+
+/* Formatting and style for header that is on every page */
+.clock {
+    display: table-cell;
+    text-align: center;
+}
+
+/* Formatting and style for header title */
+.title {
+    display: table-cell;
+    background-color: var(--primary-color);
+    width: 60%;
+    font-size: xx-large;
+    font-stretch: expanded;
+    text-align: center;
+}
+
+/* Formatting and style for navigation bar */
+.navBar {
+    display: table-cell;
+    text-align: center;
+}
+
+/* Style the Background for the Section */
+section {
+    background-color: white;
+    color: black;
+    
+}
+
+/* Background for login boxes + upload boxes */
+fieldset {
+    background: var(--secondary-color);
+    width: 33%;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px; /* Padding inside the fieldset */
+}
+
+/* Title at top of fieldset boxes */
+legend {
+    font-size: large;
+    padding: 1em;
+}
+
+/* Style the nav bar */
+nav {
+    list-style-type: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: large;
+}
+
+/* Stops the links in nav from changing color when clicked */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hover effect for nav links */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover */
+    padding: 5px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Style the main section */
+main {
+    flex: 1;
+    background-color: var(--background-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: small;
+    line-height: 2;
+    
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    fieldset {
+        width: 90%; /* Makes the fieldset take more width on smaller screens */
+    }
+
+    .title {
+        font-size: large; /* Adjust font size for smaller screens */
+    }
+
+    .navBar {
+        font-size: medium; /* Change nav bar font size */
+    }
+}
+
+/* Center article styling */
+.center {
+    text-align: center; /* Center-align contents of the article */
+}
+
+/* Flexbox container for search bar and button */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between search bar and button */
+}
+
+/* Search bar styling */
+#searchBar {
+    font-size: large;
+    width: 70%; /* Adjust width as needed */
+    padding: 10px;
+    border: 2px solid #023047;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.styled-button {
+    background-color: rgb(189, 162, 8);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.styled-button:hover {
+    background-color: rgb(2, 58, 2);
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    index.html (home page for GeoSyncra website)
+    ceg411
+    Anna Crafton
+    last updated 11/1/2024
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <script src="js/script.js"></script>
+    <script src="js/backend.js"></script>
+    <title>Home</title>
+ 
+</head>
+
+ 
+<body onload="setTime()">
+
+    <section> 
+
+        <!--Fancy looking header goes here-->
+        <header>
+
+            <!--Clock-->
+            <div class="clock">
+                <span id="clock">The time will go here</span>  
+            </div>
+
+            <!--GeoSyncra Title / Header text-->
+            <div class="title">
+                <h3>GeoSyncra</h3>
+            </div>
+            
+
+            <!--Nav Bar (links to other pages)-->
+            <div class="navBar">
+                <nav> 
+                    <a href="randomImages.html"> Viewpage | &nbsp; <a href="upload.html"> Upload | &nbsp; <a href="about.html"> About </ahref></a>
+                </nav>
+            </div>
+    
+        </header>
+    
+
+        <main>
+
+            <!-- A very large, fancy Upload Button (THAT IS NOT FANCY YET! FLAG!) -->
+            <div class="uploadButton">
+
+                <a href="upload.html">Click to Upload Image</a>
+
+            </div>
+
+            <!---Search Bar for looking up locations-->
+
+            <div class="searchContainer">
+
+                <h4>Search Locations:</h4>
+
+                <article class = "center">
+
+                    <input type="text" id="searchBar" placeholder="Search By Location...">
+                    <button id="searchButton" onClick="searchLocation()">Search</button>
+
+                </article>
+
+            </div>
+    
+
+        </main>
+
+        <!--Footer with copyright-->
+        <footer>
+
+            <h>&copy 2024 TEAm07</h>
+
+        </footer>
+
+    </section>
+    
+</body>
+
+</html>

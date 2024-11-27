@@ -1,0 +1,232 @@
+
+/*
+    viewpageStyles.css (for GeoSyncra)
+    Ceg4100
+    Gokulnaath07
+    Last Updated 11/1/2024
+
+
+*/
+
+.image-details {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%; /* Set a width for centering */
+    max-width: 600px; /* Optional: Limit max width */
+    margin-left: auto; /* Center the left margin */
+    margin-right: auto; /* Center the right margin */
+}
+
+
+.image-info {
+    max-width: 100%; /* Make sure text does not exceed container */
+    text-align: center; /* Center text inside the image-info */
+}
+
+.view-image-button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Space between search bar and button */
+}
+
+.view-image-button:hover {
+    background-image: url('viewImages.gif'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+.loaded-image {
+    width: 600px; /* Set width to 600px */
+    height: 600px; /* Set height to 600px */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-top: 10px; /* Add some space above the image */
+}
+
+.navigate-button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #032f26; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Space between search bar and button */
+}
+
+.navigate-button:hover{
+    background-image: url('navigate.gif'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+.close-image-button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4d; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Space between search bar and button */
+}
+
+
+.close-image-button:hover {
+    background-image: url('close.gif'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+/* Style for the container holding the buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    align-items: center; /* Align buttons vertically if necessary */
+}
+
+/* Optionally, style the buttons */
+.like-button,
+.comment-button,
+.add-image-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.like-button:hover,
+.comment-button:hover,
+.add-image-button:hover {
+    background-color: transparent;
+}
+
+.add-image-button {
+    display: inline-block;
+    background-image: url('add.gif'); /* Set the background image */
+    color: transparent; /* Hide text */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Makes the button round */
+    width: 50px; /* Set a specific width */
+    height: 50px; /* Set a specific height */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Space between search bar and button */
+    background-position: center; /* Align the image to the top left corner */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: contain; /* Ensure the image fits within the button */
+}
+
+.add-image-button:hover {
+    
+    background-position: center; /* Ensure image stays at the top-left corner */
+    background-size: contain; /* Ensure the image fits within the button */
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(189, 162, 8);
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Space above the button */
+}
+
+
+.upload-btn:hover {
+    background-color: rgb(2, 58, 2); /* Darker green on hover */
+}
+
+.upload-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+form input[type="text"], form input[type="file"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    width: 100%;
+    padding: 10px; /* Adds padding inside the box */
+    margin-top: 10px; /* Spacing between fields */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+.like-button {
+    display: inline-flex;  /* Use inline-flex to allow text and image to be arranged in a row */
+    align-items: center;   /* Center the text and image vertically */
+    justify-content: center; /* Center content horizontally */
+    background-image: url('hrt.png');
+    color: black;           /* Set text color to white or any color you prefer */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;  /* For positioning text over the button */
+    text-align: center;  /* Center text horizontally */
+    font-size: 14px;     /* Adjust text size */
+}
+
+.like-button:hover {
+    background-color: goldenrod;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Optional: Styling for the text (if you want to position it better) */
+.like-button span {
+    position: absolute;  /* Position text on top of the button */
+    z-index: 1;          /* Ensure text is on top of the background image */
+    font-size: 14px;     /* Adjust text size as needed */
+    color: white;        /* Set text color */
+}
+
+.comment-button{
+    display: inline-block;
+    background-image: url('comment-icon.png'); 
+    color: transparent;
+    border: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 10px; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: contain; 
+}
+.comment-button:hover{
+    background-color: goldenrod;
+    background-position: center; 
+    background-size: contain;
+}

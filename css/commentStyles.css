@@ -1,0 +1,16 @@
+
+/*commentStyles.css 
+  CSS for layout of index page (comment page for GeoSyncra website)
+  ceg411
+  Anna Crafton
+  last updated 11/19/2024*/
+
+
+/*move footer to bottom of page*/
+footer{
+
+    line-height:0.1;
+    width: 100%;
+    position: fixed;
+    bottom:0px;
+}

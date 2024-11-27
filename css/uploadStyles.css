@@ -1,0 +1,210 @@
+
+/*uploadStyles.css 
+CSS for layout of Upload Page
+ceg411
+Anna Crafton
+last updated 11/1/2024*/
+
+body {
+
+    background-color:white;
+    height: 100%;
+}
+
+form {
+    display: inline-block;
+    width: 80%;
+    background-color: rgba(46, 139, 87, 0.85); /* Seagreen with transparency */
+    padding: 3%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    line-height: 2.8;
+    margin-left: 10%;
+    margin-top: 5%;
+    /*uploadStyles.css 
+      CSS for layout of Upload Page
+      ceg411
+      Anna Crafton, Gokulnaath Govindaraj
+      last updated 11/7/2024*/
+    
+    body {
+    
+        background-color:white;
+        height: 100%;
+    }
+    
+    form {
+    
+        
+        display: inline-block;
+        width: 80%;
+        background-color: rgba(46, 139, 87, 0.85); /* Seagreen with transparency */
+        padding:3%;
+        box-sizing:border-box;
+        border-radius:15px;
+        line-height:2.8;
+        margin-left:10%;
+        margin-top:5%;
+    
+        /* Background image settings */
+        background-image: url("upload.jpg"); /* Replace with your image path */
+        background-size: cover; /* Cover the form area */
+        background-position: center;
+        background-repeat: no-repeat;
+    
+    }
+    
+    /*Goku*/
+    form input[type="text"], form input[type="file"] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        width: 100%;
+        padding: 10px; /* Adds padding inside the box */
+        margin-top: 10px; /* Spacing between fields */
+        border: 1px solid #ccc; /* Light border color */
+        border-radius: 10px; /* Rounded corners */
+        box-sizing: border-box;
+    }
+    
+    
+    input {
+    
+        font-size:x-large;
+        width:100%;
+    }
+    
+    /*Goku*/
+    h4 {
+        font-size: 24px; /* Adjust size as needed */
+        font-weight: bold; /* Optional: Make it bolder */
+        margin-bottom: 15px; /* Optional: Add spacing below */
+    }
+    
+    p{
+        font-size: 24px; /* Adjust size as needed */
+        font-weight: bold; /* Optional: Make it bolder */
+        margin-bottom: 15px; /* Optional: Add spacing below */  
+    }
+    
+    button[type="submit"] {
+        background-color: rgb(189, 162, 8); /* Green background */
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding for size */
+        font-size: 16px; /* Font size */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth color transition */
+    }
+    
+    /* Hover effect */
+    button[type="submit"]:hover {
+        background-color: rgb(2, 58, 2); /* Darker green on hover */
+    }
+    .geoLocationContainer {
+        display: flex; /* Use flexbox to align items */
+        align-items: center; /* Center items vertically */
+        
+        
+    }
+    
+    .geoLocationContainer input[type="text"] {
+        flex: 1; /* Allow the input to take up available space */
+        margin-right: 10px; /* Space between the input and button */
+        
+    }
+    
+    /*move footer to bottom of page*/
+    footer{
+    
+        width: 100%;
+        position: fixed;
+        bottom:0px;
+    }
+    
+    
+    /* Background image settings */
+    background-image: url('upload.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the form area */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+form input[type="text"],
+form input[type="file"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    width: 100%;
+    padding: 10px; /* Adds padding inside the box */
+    margin-top: 10px; /* Spacing between fields */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+input{
+
+font-size:x-large;
+    width:100%;
+}
+
+h4 {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Optional: Make it bolder */
+    margin-bottom: 15px; /* Optional: Add spacing below */
+}
+
+p{
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Optional: Make it bolder */
+    margin-bottom: 15px; /* Optional: Add spacing below */  
+}
+button[type="submit"] {
+    background-color: rgb(189, 162, 8); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+button[type="submit"]:hover {
+    background-color: rgb(2, 58, 2); /* Darker green on hover */
+}
+button[type="reset"] {
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+button[type="reset"]:hover {
+    background-color: silver; /* Darker green on hover */
+}
+.geoLocationContainer {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    
+    
+}
+
+.geoLocationContainer input[type="text"] {
+    flex: 1; /* Allow the input to take up available space */
+    margin-right: 10px; /* Space between the input and button */
+    
+}
+/*move footer to bottom of page*/
+footer{
+
+    width: 100%;
+    position: fixed;
+    bottom:0px;
+}
+

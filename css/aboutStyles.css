@@ -1,0 +1,53 @@
+
+/*indexStyles.css 
+  CSS for layout of index page (home page for GeoSyncra website)
+  ceg411
+  Anna Crafton
+  last updated 11/1/2024*/
+
+
+
+/*image formating for About page only*/
+img {
+
+    width: 100%;
+    border-radius:15px;
+}
+
+
+/*main body section of the page. Includes 'about' section and a photo aranged in a row*/
+.mainPageContainer{
+
+    width:100%;
+    text-align: justify;
+    font-size: 0;
+}
+
+
+.photo {
+
+    display: inline-block;
+    width: 71%;
+    background-color:white;
+    padding:1%; 
+    box-sizing:border-box;
+
+}
+
+.about {
+
+    display:inline-block;
+    width: 28%;
+    box-sizing:border-box;
+    padding: 5%;
+    background-color: white;
+    vertical-align:top;
+    font-size:large;
+    line-height:1.5;
+    
+}
+
+
+
+
+

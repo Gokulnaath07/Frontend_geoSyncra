@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    upload.html (page to submit locations to GeoSyncra website)
+    ceg411
+    Anna Crafton
+    last updated 10/24/2024
+-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/uploadStyles.css">
+    <script src="js/backend.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/geolocation.js" defer></script> <!-- New script for geolocation -->
+    <title>Upload</title>
+
+</head> 
+
+<body>
+
+    <!-- Header with clock and title -->
+    <header>
+
+        <!-- Clock -->
+        <div class="clock">
+            <span id="clock">The time will go here</span>  
+        </div>
+
+        <!-- GeoSyncra Title / Header text -->
+        <div class="title">
+            <h3>GeoSyncra</h3>
+        </div>
+
+        <!-- Nav Bar (links to other pages) -->
+        <div class="navBar">
+            <nav> 
+                <a href="index.html"> Home </a> | &nbsp; <a href="randomImages.html"> Viewpage </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section id="Main">
+
+            <!-- Upload Form -->
+            <form id="uploadForm">
+                
+                <input type="text" id="name" name="name" placeholder="Enter Name" required />
+                <input type="text" id="description" name="description" placeholder="Enter Description" required />
+                <input type="text" id="location" name="location" placeholder="Enter Location" required />
+                
+                <!-- Geolocation field with button to fetch current location -->
+                <div class="geoLocationContainer">
+                    <input type="text" id="geoLocation" name="geoLocation" placeholder="Get Current Location" readonly required />
+                    <button type="button" id="getLocationButton">🔵</button>
+                </div>
+
+                <input type="file" id="imageFile" name="imageFile" accept="image/*" required />
+                <button type="submit">Upload</button>
+                <button type ="reset">Reset</button>
+                <p id="uploadStatus"></p>
+            </form>
+            
+    </section>
+   <!--Footer with copyright-->
+   <footer>
+
+        <div id="footerSpace"></div>
+
+        <h>&copy 2024 TEAm07</h>
+
+    </footer>
+
+
+</body> 
+
+</html>

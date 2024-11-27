@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    comment.html (comment page for GeoSyncra website)
+    ceg411
+    Anna Crafton
+    last updated 11/19/2024
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/commentStyles.css">
+    <script src="js/script.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/commentScript.js"></script>
+    <title>Comments</title>
+</head>
+
+<body>
+
+    <section>
+        <!-- Fancy looking header goes here -->
+        <header>
+            <!-- Clock -->
+            <div class="clock">
+                <span id="clock">The time will go here</span>  
+            </div>
+
+            <!-- GeoSyncra Title / Header text -->
+            <div class="title">
+                <h3>GeoSyncra</h3>
+            </div>
+            
+            <!-- Nav Bar (links to other pages) -->
+            <div class="navBar">
+                <nav> 
+                    <a href="randomImages.html"> Viewpage &nbsp;</a>
+                    <a href="upload.html">Upload &nbsp;</a>
+                    <a href="about.html">About</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Form to add a new comment -->
+        <div class="comment-form">
+            <h3>Post a Comment</h3>
+            <form id="commentForm">
+                <input type="text" id="commentText" name="CommentText" placeholder="Enter  your comment here..." required />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <p id="uploadStatus"></p> <!-- For showing upload status (success or error) -->
+
+        
+    </div>
+        <!-- Comments Section in HTML -->
+        <div class="comments-section">
+            <h2>Comments</h2>
+            <ul id="commentsList">
+                <!-- Comments will be dynamically loaded here -->
+            </ul>
+            
+            
+
+    </section>
+    <footer>
+
+        <p>&copy; 2024 Team07</p>
+
+    </footer>
+</body>
+
+</html>

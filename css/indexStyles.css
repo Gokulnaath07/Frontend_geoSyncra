@@ -1,0 +1,98 @@
+
+/*indexStyles.css 
+  CSS for layout of index page (home page for GeoSyncra website)
+  ceg411
+  Anna Crafton
+  last updated 11/1/2024*/
+
+
+/*searchbar*/
+.searchContainer{
+
+    background-color:seagreen;   
+    width: 70%;
+    padding:3%;
+    box-sizing:border-box;
+    border-radius:15px;
+    line-height:2.0;
+    margin-left:5%;
+    margin-top:5%;
+    float:left;
+
+}
+
+
+/* Styling the search button */
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #CBA052; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Space between search bar and button */
+}
+
+/* Hover effect for the search button */
+#searchButton:hover {
+    background-image: url('searching.gif'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the button */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+/* Focus effect for accessibility */
+#searchButton:focus {
+    outline: 2px solid silver; /* Blue outline on focus */
+    outline-offset: 2px; /* Space between button and outline */
+}
+
+/*Title*/
+h4 {
+
+    font-size:x-large;
+    color:white;
+    text-align:left;
+}
+
+/*   Links #fb8500 
+    background #8ecae6
+    dark tone #023047
+    middle tone #2193bc
+    bright tone #ffb703*/
+
+/*Upload button*/
+.uploadButton {
+
+    background-color:seagreen;
+    width: 15%;
+    font-size:x-large;
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
+    border-radius:15px;
+    height: 6em;
+    text-align:center;
+    justify-items:center;
+    float:center;
+    color:white;
+    float:right;
+
+}
+
+
+
+/*Fix footer postition*/
+footer{
+
+    width: 100%;
+    position:fixed;
+    bottom:0px;
+
+}
+
+
+
+
