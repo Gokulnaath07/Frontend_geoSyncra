@@ -31,7 +31,7 @@ const pageSize = 3; // Number of items per page
 function fetchImageDetails() {
     const location = getQueryParams('location');
     if (location) {
-        const apiUrl = `http://localhost:5050/location/${location}?page=${currentPage}&size=${pageSize}`;
+        const apiUrl = `https://insightful-generosity-production.up.railway.app/location/${location}?page=${currentPage}&size=${pageSize}`;
         console.log(`Fetching from URL: ${apiUrl}`);
 
         fetch(apiUrl)
@@ -153,7 +153,7 @@ function renderImageDetails(image, article) {
                     const formData = new FormData(uploadForm);
     
                     // Submit the form data to the backend API with the specific imageId in the URL
-                    fetch(`http://localhost:5050/${image.id}/addChildImage`, {
+                    fetch(`https://insightful-generosity-production.up.railway.app/${image.id}/addChildImage`, {
                         method: 'POST',
                         body: formData,  // This includes the name and image file
                     })
@@ -205,7 +205,7 @@ function renderImageDetails(image, article) {
             likeButton.dataset.likeCount = currentLikeCount;
     
             // Send the updated like count to the backend
-            fetch(`http://localhost:5050/${image.id}/like?like=${currentLikeCount}`, {
+            fetch(`https://insightful-generosity-production.up.railway.app/${image.id}/like?like=${currentLikeCount}`, {
                 method: 'PUT',
             })
             .then(response => {
@@ -252,7 +252,7 @@ window.onload = function() {
 };
 
 function fetchImagesByParentId(parentId, imageGallery, closeGalleryButton) {
-    fetch(`http://localhost:5050/${parentId}/child`)
+    fetch(`https://insightful-generosity-production.up.railway.app/${parentId}/child`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch image data');
@@ -283,7 +283,7 @@ function fetchImagesByParentId(parentId, imageGallery, closeGalleryButton) {
 
 // Function to fetch geolocation by image ID and navigate to Google Maps
 function fetchGeoLocation(imageId) {
-    fetch(`http://localhost:5050/images/${imageId}/geoLocation`)
+    fetch(`https://insightful-generosity-production.up.railway.app/images/${imageId}/geoLocation`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Geolocation not found');

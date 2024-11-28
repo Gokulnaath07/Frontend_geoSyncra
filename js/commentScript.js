@@ -2,7 +2,7 @@ const imageId = getQueryParams('imageId'); // Get imageId from query parameter
 
 // Function to fetch and display comments for the specific image
 function fetchComments(imageId) {
-    fetch(`http://localhost:5050/images/${imageId}/comment`)
+    fetch(`https://insightful-generosity-production.up.railway.app/images/${imageId}/comment`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch comments');
@@ -44,7 +44,7 @@ function uploadComment(event) {
     }
 
     // Send POST request to backend to add the comment
-    fetch(`http://localhost:5050/${imageId}/comments`, {
+    fetch(`https://insightful-generosity-production.up.railway.app/${imageId}/comments`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded', // Adjust content type as needed

@@ -12,7 +12,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     uploadStatus.textContent = 'Uploading...';
 
     // Use fetch API to send the form data to your server
-    fetch('http://localhost:5050/uploadImages', { // Use the correct endpoint
+    fetch('https://insightful-generosity-production.up.railway.app/uploadImages', { // Use the correct endpoint
         method: 'POST',
         body: formData,
     })
