@@ -1,59 +1,64 @@
+// Upload.js
 
+document.addEventListener("DOMContentLoaded", () => {
+    // DOM elements
+    const uploadForm = document.getElementById("uploadForm");
+    const getLocationButton = document.getElementById("getLocationButton");
+    const geoLocationInput = document.getElementById("geoLocation");
+    const uploadStatus = document.getElementById("uploadStatus");
 
-// Upload form event listener
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    // Function to get the current location
+    const getCurrentLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+                    geoLocationInput.value = `${latitude}, ${longitude}`;
+                },
+                (error) => {
+                    console.error("Error getting location:", error.message);
+                    geoLocationInput.value = "Unable to retrieve location";
+                }
+            );
+        } else {
+            geoLocationInput.value = "Geolocation not supported by this browser";
+        }
+    };
 
-    // Create a new FormData object
-    const formData = new FormData(this);
+    // Event listener for the "Get Location" button
+    getLocationButton.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent form submission
+        getCurrentLocation();
+    });
 
-    // Display status message
-    const uploadStatus = document.getElementById('uploadStatus');
-    uploadStatus.textContent = 'Uploading...';
+    // Form submission handler
+    uploadForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent page reload on form submission
 
-    // Use fetch API to send the form data to your server
-    fetch('https://insightful-generosity-production.up.railway.app/uploadImages', { // Use the correct endpoint
-        method: 'POST',
-        body: formData,
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Upload failed');
-            }
-            return response.json(); // Assuming your server returns JSON
+        // Create a FormData object to hold form data
+        const formData = new FormData(uploadForm);
+
+        // Send form data to server
+        fetch("https://insightful-generosity-production.up.railway.app/uploadImages", {
+            method: "POST",
+            body: formData,
         })
-        .then(data => {
-
-            uploadStatus.textContent = 'Upload successful'; // Display success message
-            // Clear the form fields after successful upload
-            document.getElementById('uploadForm').reset(); 
-        })
-        .catch(error => {
-            uploadStatus.textContent = 'Error: ' + error.message; // Display error message
-        });
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Failed to upload data");
+                }
+            })
+            .then((data) => {
+                uploadStatus.textContent = "Upload successful!";
+                uploadStatus.style.color = "green";
+                console.log("Response from server:", data);
+            })
+            .catch((error) => {
+                console.error("Upload error:", error);
+                uploadStatus.textContent = "Upload failed. Please try again.";
+                uploadStatus.style.color = "red";
+            });
+    });
 });
-
-
-
-
-
-// Function to get the user's current location
-function getCurrentLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            position => {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-                document.getElementById('geoLocation').value = `${latitude},${longitude}`; // Set the input field value
-            },
-            error => {
-                console.error('Error getting location:', error);
-                alert('Unable to retrieve your location. Please enable location services.');
-            }
-        );
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
-
-

@@ -292,7 +292,7 @@ function fetchGeoLocation(imageId) {
         })
         .then(geoLocation => {
             const [latitude, longitude] = geoLocation.split(','); // Split lat,long
-            const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}`; 
+            const mapUrl = `http://www.google.com/maps?q=${latitude},${longitude}`; 
             window.open(mapUrl, '_blank'); // Open in a new tab
         })
         .catch(error => {
