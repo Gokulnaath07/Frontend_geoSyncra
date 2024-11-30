@@ -193,19 +193,20 @@ function renderImageDetails(image, article) {
         });
     }
     if (likeButton) {
-
         likeButton.addEventListener('click', () => {
             // Get the current like count from the button's data attribute
-            let currentLikeCount = parseInt(likeButton.dataset.likeCount) || 0;
+            let str = likeButton.dataset.likeCount || "0 Likes"; // Default to "0 Likes" if not present
+            let numLikes = parseInt(str.split(' ')[0]); // Extract the number from the string and convert to number
             
             // Increment the like count
-            currentLikeCount += 1;
-            
-            // Update the data attribute with the new like count
-            likeButton.dataset.likeCount = currentLikeCount;
+            numLikes++;
+    
+            // Update the like count in the dataset and button text
+            likeButton.dataset.likeCount = numLikes;
+            likeButton.textContent = `${numLikes} Likes`; // Update button text
     
             // Send the updated like count to the backend
-            fetch(`https://insightful-generosity-production.up.railway.app/${image.id}/like?like=${currentLikeCount}`, {
+            fetch(`https://insightful-generosity-production.up.railway.app/${image.id}/like?like=${numLikes}`, {
                 method: 'PUT',
             })
             .then(response => {
@@ -216,16 +217,12 @@ function renderImageDetails(image, article) {
             })
             .then(result => {
                 console.log('Like added successfully:', result);
-                
-                // Optionally, update the button text to show the updated like count
-                likeButton.textContent = `${currentLikeCount}`;
             })
             .catch(error => {
                 console.error('Error adding like:', error);
                 alert(error.message);
             });
         });
-        
     }
 }
 
